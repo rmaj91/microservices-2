@@ -1,3 +1,4 @@
 rootProject.name = 'microservices-practise'
 
 include 'licensing-service'
+include 'config-server'
