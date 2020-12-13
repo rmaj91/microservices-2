@@ -16,10 +16,9 @@ public class LicenseServiceController {
 
     private final LicenseService licenseService;
 
-    @GetMapping("/organizations/{organizationId}/licenses/{licenseId}")
-    public ResponseEntity<License> getLicense(@PathVariable("organizationId") String organizationId,
-                                              @PathVariable("licenseId") String licenseId) {
-        return licenseService.find(organizationId, licenseId)
+    @GetMapping("/licenses/{id}")
+    public ResponseEntity<License> getLicense(@PathVariable("id") Long id) {
+        return licenseService.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }

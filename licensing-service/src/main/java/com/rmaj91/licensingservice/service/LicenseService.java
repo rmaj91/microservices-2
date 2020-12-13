@@ -13,11 +13,11 @@ public class LicenseService {
 
     private final LicenseRepository licenseRepository;
 
-    public Optional<License> find(String organizationId, String licenseId) {
-        return licenseRepository.findByOrganizationIdAndLicenseId(organizationId, licenseId);
-    }
-
     public License create(License license) {
         return licenseRepository.save(license);
+    }
+
+    public Optional<License> findById(Long id) {
+        return licenseRepository.findById(id);
     }
 }

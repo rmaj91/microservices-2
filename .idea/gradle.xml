@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/config-server" />
             <option value="$PROJECT_DIR$/eureka-server" />
             <option value="$PROJECT_DIR$/licensing-service" />
+            <option value="$PROJECT_DIR$/organization-service" />
           </set>
         </option>
       </GradleProjectSettings>

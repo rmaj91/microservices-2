@@ -9,5 +9,4 @@ import java.util.Optional;
 @Repository
 public interface LicenseRepository extends JpaRepository<License, Long> {
 
-    Optional<License> findByOrganizationIdAndLicenseId(String organizationId, String licenseId);
 }
