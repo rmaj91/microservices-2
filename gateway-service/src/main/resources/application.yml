@@ -1,0 +1,19 @@
+zuul:
+  # ignoring automapping, comma separated list
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    licensing-service: /license/**
+    organization-service: /organization/**
+    example-static:
+      path: /static/**
+      url: http://wp.pl
+# by replacing 'default' with service-id in property below u can set timeout for specific service
+# if you want longer than 5s u have to set also servicename.ribbon.ReadTimeout which is default 5000ms
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 2500
